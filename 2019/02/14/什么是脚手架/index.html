@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>什么是脚手架 | 善</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#ff6600">
+    
+    
+    <meta name="keywords" content="vue">
+    <meta name="description" content="什么是脚手架？ 脚手架是工具，是用来辅助工程师进行项目的构建、运行等相关工作，他可以是一个完整的架构，也可以是项目中的一个小架构，这个架构有一个非常显著的特征，复制性强，也称之为可复制模块。以上是文章摘要">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是脚手架">
+<meta property="og:url" content="http://yoursite.com/2019/02/14/什么是脚手架/index.html">
+<meta property="og:site_name" content="善">
+<meta property="og:description" content="什么是脚手架？ 脚手架是工具，是用来辅助工程师进行项目的构建、运行等相关工作，他可以是一个完整的架构，也可以是项目中的一个小架构，这个架构有一个非常显著的特征，复制性强，也称之为可复制模块。以上是文章摘要">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-20T01:57:59.311Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是脚手架">
+<meta name="twitter:description" content="什么是脚手架？ 脚手架是工具，是用来辅助工程师进行项目的构建、运行等相关工作，他可以是一个完整的架构，也可以是项目中的一个小架构，这个架构有一个非常显著的特征，复制性强，也称之为可复制模块。以上是文章摘要">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/ti1.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">慈</h5>
+          <a href="mailto:2271339303@qq.com" title="2271339303@qq.com" class="mail">2271339303@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wuchangyune.github.io/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wuchangyune.github.io" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/5506098285" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">什么是脚手架</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">什么是脚手架</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-02-14T06:17:46.000Z" itemprop="datePublished" class="page-time">
+  2019-02-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是脚手架？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是脚手架？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是Vue-cli"><span class="post-toc-number">2.</span> <span class="post-toc-text">什么是Vue-cli?</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue-cli的使用"><span class="post-toc-number">3.</span> <span class="post-toc-text">Vue-cli的使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目目录"><span class="post-toc-number">4.</span> <span class="post-toc-text">项目目录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue的-vue文件"><span class="post-toc-number">5.</span> <span class="post-toc-text">vue的.vue文件</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-什么是脚手架" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">什么是脚手架</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-02-14 14:17:46" datetime="2019-02-14T06:17:46.000Z" itemprop="datePublished">2019-02-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="什么是脚手架？"><a href="#什么是脚手架？" class="headerlink" title="什么是脚手架？"></a>什么是脚手架？</h2><blockquote>
+<p>脚手架是工具，是用来辅助工程师进行项目的构建、运行等相关工作，他可以是一个完整的架构，也可以是项目中的一个小架构，这个架构有一个非常显著的特征，复制性强，也称之为可复制模块。<br>以上是文章摘要 <a id="more"></a> 以下是余下全文 </p>
+</blockquote>
+<h2 id="什么是Vue-cli"><a href="#什么是Vue-cli" class="headerlink" title="什么是Vue-cli?"></a>什么是Vue-cli?</h2><blockquote>
+<p>vue-cli是vue的脚手架工具，它是帮助前端工程师快速构建vue项目(基础代码工具),构建的基础功能有：项目目录结构，本地调试，代码部署，热加载以及单元测试。</p>
+</blockquote>
+<h2 id="Vue-cli的使用"><a href="#Vue-cli的使用" class="headerlink" title="Vue-cli的使用"></a>Vue-cli的使用</h2><ol>
+<li>全局安装vue-cli工具<blockquote>
+<p>安装指令-<code>npm/cnpm install vue-cli -g;</code>-g 表示全局安装,安装成功之后vue -V 或者vue –version 查看当前vue库的版本<br>命令：vue list 查看当前vue的现有的工程模板<br>模板的分类：官方模板，简洁版，自定义模板</p>
+</blockquote>
+</li>
+<li>创建vue-cli 工程<blockquote>
+<p>通过工程模板进行快速构建项目,<code>vue init webpack projectname</code></p>
+</blockquote>
+</li>
+<li>启动项目<blockquote>
+<p>npm run dev #用来启动开发模式下的应用程序，并不是真正意义上的生产模式(上线模式)</p>
+</blockquote>
+<h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2></li>
+</ol>
+<ul>
+<li>文件说明<blockquote>
+<p>bulid用来配置webpack打包的一些相关设置,config 针对开发环境和上线环境配置.src 项目源代码,index.html是页面内容,mian.js是程序入口</p>
+</blockquote>
+<h2 id="vue的-vue文件"><a href="#vue的-vue文件" class="headerlink" title="vue的.vue文件"></a>vue的.vue文件</h2><blockquote>
+<p>一个vue后缀的文件就是一个组件<br>一个vue文件标准组成是由三个部分组成<br>1.template 表示当前文件的内容模板，组件的ui内容<br>2.script 表示当前组件的相关逻辑<br>3.style 表示当前组件的样式</p>
+</blockquote>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-02-20T01:57:59.311Z" itemprop="dateUpdated">2019-02-20 09:57:59</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/ti1.jpg" alt="慈">
+            慈
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/02/14/什么是脚手架/&title=《什么是脚手架》 — 善&pic=http://yoursite.com/img/ti1.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/14/什么是脚手架/&title=《什么是脚手架》 — 善&source=什么是脚手架？
+脚手架是工具，是用来辅助工程师进行项目的构建、运行等相关工作，他可以是一个完整的架构，也可以是项目中的一个小架构，这个架构有一个非常显著的..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/02/14/什么是脚手架/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《什么是脚手架》 — 善&url=http://yoursite.com/2019/02/14/什么是脚手架/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/02/14/什么是脚手架/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/02/22/前端技术专题-模块-Es6/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端技术专题:模块(Es6)</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'true';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .comments {
+        margin-top: 40px;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+        border-radius: 4px;
+    }
+
+    #pop_ad,
+    #feedAv {
+        margin-top: -250px !important;
+        transform: scale(0);
+    }
+
+</style>
+<section class="comments" id="comments">
+    
+    <div id="SOHUCS" sid></div>
+    
+    <script>
+        (function () {
+            var appid = 'cyu7vHmsH'
+            var conf = '2e0e9a250c1b80ee03df07f95faa66d3'
+            var width = window.innerWidth || document.documentElement.clientWidth
+            if (width < 960) {
+                window.document.write(
+                    '<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' +
+                    appid + '&conf=' + conf + '"><\/script>')
+            } else {
+                var loadJs = function (d, a) {
+                    var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+                    var b = document.createElement('script')
+                    b.setAttribute('src', d)
+                    if (typeof a === 'function') {
+                        if (window.attachEvent) {
+                            b.onreadystatechange = function () {
+                                var e = b.readyState
+                                if (e === 'loaded' || e === 'complete') {
+                                    b.onreadystatechange = null
+                                    a()
+                                }
+                            }
+                        } else {
+                            b.onload = a
+                        }
+                    }
+                    c.appendChild(b)
+                }
+                loadJs('https://changyan.sohu.com/upload/changyan.js', function () {
+                    window.changyan.api.config({
+                        appid: appid,
+                        conf: conf
+                    })
+                })
+            }
+        })()
+
+    </script>
+</section>
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        啵啵~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/weixin.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>慈 &copy; 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/02/14/什么是脚手架/&title=《什么是脚手架》 — 善&pic=http://yoursite.com/img/ti1.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/14/什么是脚手架/&title=《什么是脚手架》 — 善&source=什么是脚手架？
+脚手架是工具，是用来辅助工程师进行项目的构建、运行等相关工作，他可以是一个完整的架构，也可以是项目中的一个小架构，这个架构有一个非常显著的..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/02/14/什么是脚手架/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《什么是脚手架》 — 善&url=http://yoursite.com/2019/02/14/什么是脚手架/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/02/14/什么是脚手架/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/02/14/什么是脚手架/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '人择君子处';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '鸟择良木栖';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":70,"height":140},"mobile":{"show":true},"log":false});</script></body>
+</html>
