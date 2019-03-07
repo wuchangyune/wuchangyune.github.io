@@ -201,8 +201,6 @@
 
 
         
-        <a href="/2019/02/22/前端技术专题-模块-Es6/" target="_blank" rel="external">http://yoursite.com/2019/02/22/前端技术专题-模块-Es6/</a>
-        
     </div>
     
     <footer>
@@ -324,6 +322,69 @@ Es6种如何使用模块？" data-title=" QQ">
 
 
 
+
+
+
+<style>
+    .comments {
+        margin-top: 40px;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+        border-radius: 4px;
+    }
+
+    #pop_ad,
+    #feedAv {
+        margin-top: -250px !important;
+        transform: scale(0);
+    }
+
+</style>
+<section class="comments" id="comments">
+    
+    <div id="SOHUCS" sid></div>
+    
+    <script>
+        (function () {
+            var appid = 'cyu7vHmsH'
+            var conf = '2e0e9a250c1b80ee03df07f95faa66d3'
+            var width = window.innerWidth || document.documentElement.clientWidth
+            if (width < 960) {
+                window.document.write(
+                    '<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' +
+                    appid + '&conf=' + conf + '"><\/script>')
+            } else {
+                var loadJs = function (d, a) {
+                    var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+                    var b = document.createElement('script')
+                    b.setAttribute('src', d)
+                    if (typeof a === 'function') {
+                        if (window.attachEvent) {
+                            b.onreadystatechange = function () {
+                                var e = b.readyState
+                                if (e === 'loaded' || e === 'complete') {
+                                    b.onreadystatechange = null
+                                    a()
+                                }
+                            }
+                        } else {
+                            b.onload = a
+                        }
+                    }
+                    c.appendChild(b)
+                }
+                loadJs('https://changyan.sohu.com/upload/changyan.js', function () {
+                    window.changyan.api.config({
+                        appid: appid,
+                        conf: conf
+                    })
+                })
+            }
+        })()
+
+    </script>
+</section>
 
 
 
