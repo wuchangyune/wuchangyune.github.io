@@ -147,6 +147,128 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ORM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <p>title: ORM<br>date: 2019-03-12 21:30:20<br>tags: flask</p>
+<h1 id="1-ORM是什么"><a href="#1-ORM是什么" class="headerlink" title="1.ORM是什么?"></a>1.ORM是什么?</h1><blockquote>
+<p>模型关系映射<br><code>Object Relationship Mapping</code></p>
+</blockquote>
+<h1 id="2-flask-sqlalchemy-是什么？"><a href="#2-flask-sqlalchemy-是什么？" class="headerlink" title="2.flask-sqlalchemy 是什么？"></a>2.flask-sqlalchemy 是什么？</h1><blockquote>
+<p>它是⼀套ORM框架</p>
+</blockquote>
+<h1 id="3-使⽤flask-sqlalchemy"><a href="#3-使⽤flask-sqlalchemy" class="headerlink" title="3.使⽤flask-sqlalchemy:"></a>3.使⽤flask-sqlalchemy:</h1><blockquote>
+<p>在终端执行<code>pip install flask-sqlalchemy</code>注意 它有个前提 是基于flask app</p>
+</blockquote>
+<h1 id="4-Flask-SQLAlchemy-的基本使⽤"><a href="#4-Flask-SQLAlchemy-的基本使⽤" class="headerlink" title="4.Flask-SQLAlchemy 的基本使⽤"></a>4.Flask-SQLAlchemy 的基本使⽤</h1><blockquote>
+<ul>
+<li><p>1.1 导⼊ flask-sqlalchemy<br><code>from flask_sqlalchemy import SQLAlchemy</code></p>
+</li>
+<li><p>1.2 使⽤ <code>flask-sqlalchemy</code>初始化数据库对象,<code>db = SQLAlchemy(app)</code></p>
+</li>
+<li><p>1.3 创建的配置⽂件 config.py 和app.py 同⽬录,需要配置数据库类型、引擎、⽤户名、密码、数据库IP、端⼝以及指定的数据</p>
+<ul>
+<li><p>库名 格式<code>dialect+driver://username:password@host:port/database?</code></p>
+<p><code>charset=utf8
+DIALECT = &#39;mysql&#39;
+DIRVER = &#39;pymysql&#39;
+USERNAME = &#39;root&#39;
+PASSWORD = &#39;123456&#39;
+HOST = &#39;127.0.0.1&#39;
+PORT = &#39;3306&#39;
+DATABASE = &#39;py305db&#39;</code>固定写法</p>
+<p>数据库链接的配置，此项必须，格式为（数据库+驱动://⽤户名:密码@数据库主机地址:端⼝/数据库名称）</p>
+<p><code>SQLALCHEMY_DATABASE_URI = &quot;{}+{}://{}:{}@{}:{}/{}?
+charset=utf8&quot;.format(DIALECT,DIRVER,USERNAME,PASSWORD,HOST,
+PORT,DATABASE)</code></p>
+</li>
+<li><p>跟踪对象的修改，⽬前⽤不到调⾼运⾏效率，所以设置为<code>FalseSQLALCHEMY_TRACK_MODIFICATIONS = False</code></p>
+<p><img src="C:\Users\changyuWu\AppData\Roaming\Typora\typora-user-images\1552398789229.png" alt="1552398789229"></p>
+</li>
+</ul>
+</li>
+<li><p>1.4 导⼊config 配置⽂件<br><code>import config
+app = Flask(__name__)</code></p>
+</li>
+<li>1.5 使⽤配置⽂件</li>
+</ul>
+<blockquote>
+<p>​    app.config.from_object(config)</p>
+</blockquote>
+<ul>
+<li>1.6 测试是否有问题db.create_all()</li>
+</ul>
+</blockquote>
+<h1 id="5-创建表"><a href="#5-创建表" class="headerlink" title="5.创建表"></a>5.创建表</h1><blockquote>
+<p>创建表⾸先要创建 Class 进⾏对应的映射</p>
+<p>‘’’成绩表’’’ `create table score(</p>
+<p>id int primary key auto_increment,</p>
+<p>classname varchar(100) not null,</p>
+<p>sc int not nul)`</p>
+<blockquote>
+<p> class Score(db.Model):## 继承SQLAlchemy.Model对象，⼀个对象代表<br>了⼀张表,<strong>tablename</strong> = ‘score’ # 该参数可选，不设置会默认的设置表<br>名，如果设置会覆盖默认的表名,id 整型，主键，⾃增，唯⼀id =<br>db.Column(db.Integer,primary_key=True,autoincrement=True)名字 字符串⻓度为100 ⾮空 classname = db.Column(db.String(100),nullable=False)成绩 整型，默认为0sc = db.Column(db.Integer, default=0)初始化⽅法，可以对对象进⾏创建</p>
+<p><code>def __init__(self,classname=&#39;&#39;,sc=0):
+ self.classname = classname
+ self.sc = sc</code></p>
+<p>输出⽅法，与<strong>str</strong>类似，但是能够重现它所代表的对象</p>
+<p> def <strong>repr</strong>(self):<br> return ‘<score %r,%r,%r>‘ %<br>(self.id,self.classname,self.sc)</score></p>
+<h2 id="注意-class创建要写在-db-create-all-之前"><a href="#注意-class创建要写在-db-create-all-之前" class="headerlink" title="注意 class创建要写在 db.create_all() 之前"></a>注意 class创建要写在 db.create_all() 之前</h2></blockquote>
+</blockquote>
+<h1 id="6-添加数据"><a href="#6-添加数据" class="headerlink" title="6.添加数据"></a>6.添加数据</h1><blockquote>
+<p> 6.1增加数据</p>
+<p><code>python = Score(classname=&#39;java&#39;,sc=90)</code></p>
+<p>6.2 事务操作</p>
+<p><code>db.session.add(python)</code><br><code>db.session.commit()</code><br>列的类型是Column的第⼀个参数。可以直接指定他们，也可以的调⽤<br>他们以进⼀步的指定他们的⻓度。以下类型是最常⻅的:<img src="C:\Users\changyuWu\AppData\Roaming\Typora\typora-user-images\1552398698395.png" alt="1552398698395"></p>
+</blockquote>
+
+      
+      
+      
+      <div class="declare" hidden="hidden"></div>
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <p class="article-more-link">
+        <a class="article-more-a" href="/2019/03/12/ORM/">
+          展开全文 >></a>
+      </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-前端技术专题-模块-Es6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -413,11 +535,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
